@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dev-customerName-projectName-frontend-deployment
-  namespace: dev-customerName-projectName-frontend
+  name: dev-NOM PRENOM-MonApplication-frontend-deployment
+  namespace: dev-NOM PRENOM-MonApplication-frontend
   labels:
-    app: dev-customerName-projectName-frontend
+    app: dev-NOM PRENOM-MonApplication-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dev-customerName-projectName-frontend
+      app: dev-NOM PRENOM-MonApplication-frontend
   template:
     metadata:
       labels:
-        app: dev-customerName-projectName-frontend
+        app: dev-NOM PRENOM-MonApplication-frontend
     spec:
       containers:
-        - name: dev-customerName-projectName-frontend
-          image: corentin35/customerName-projectName-frontend:develop-${TAG_VERSION}
+        - name: dev-NOM PRENOM-MonApplication-frontend
+          image: corentin35/NOM PRENOM-MonApplication-frontend:develop-${TAG_VERSION}
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
